@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  db:
+
+services:
+  mysql:
+    build: mysql
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      TZ: ${DB_TIMEZONE}
+    ports:
+      - 3307:${DB_PORT}
+    volumes:
+      - ./mysql/var/lib/mysql:/var/lib/mysql
+    networks:
+      - db
+  phpmyadmin:
+    build: phpmyadmin
+    container_name: phpmyadmin
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      PMA_HOST: mysql
+      PMA_PORT: ${DB_PORT}
+    ports:
+      - 8081:80
+    networks:
+      - db
