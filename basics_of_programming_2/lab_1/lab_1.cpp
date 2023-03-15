@@ -28,6 +28,11 @@ class Row
         {
             return this->_m_row.length();
         }
+
+        ~Row()
+        {
+            this->_m_row.clear();
+        }
 };
 
 class Text
