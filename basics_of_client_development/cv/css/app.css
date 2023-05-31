@@ -1,0 +1,285 @@
+/* All elements reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Colors variables */
+:root {
+    --primary-color: #161D2A;
+    --secondary: #E0EBFE;
+    --accent: #6D9BF5;
+    --black: #000;
+    --white: #fff;
+    --light-gray: #A8A8A8;
+    --gray: #595959;
+}
+
+/* <a> tags underline reset */
+a {
+    text-decoration: none;
+}
+
+.body {
+    background-color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+    padding: 40px;
+}
+
+/* Website main wrapper */
+.wrapper {
+    background-color: var(--white);
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    position: relative;
+}
+
+.side-bar {
+    background-color: var(--secondary);
+    width: 370px;
+    padding: 40px 0;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.about-me-container {
+    padding: 100px 90px;
+}
+
+.contacts-list {
+    list-style: none;
+}
+
+.contacts-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--primary-color);;
+    transition: color 0.3s ease;
+}
+
+.contacts-link.email {
+    text-decoration: underline;
+    color: revert;
+}
+
+.contacts-link:hover,
+.training-text:hover {
+    color: var(--accent);;
+}
+
+.contacts-link-type {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--primary-color);;
+    margin-right: 10px;
+    width: 15px;
+    display: inline-block;
+}
+
+.aside-container {
+    margin: 50px 40px 0;
+}
+
+.aside-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.aside-item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--accent);
+    margin-left: 15px;
+}
+
+.aside-text {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.bio-occupation {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.bio-title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--black);
+}
+
+.bio-description {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.info-container {
+    margin-bottom: 50px;
+}
+
+.projects {
+    margin: 64px 0 50px;
+}
+
+.projects__list {
+    counter-reset: list;
+    margin-left: 1.5rem;
+}
+
+.projects__item {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    counter-increment: list;
+    margin: 6px 0;
+}
+
+.projects__item::before {
+    content: counter(list)'.';
+    position: absolute;
+    left: -1.5rem;
+    color: var(--black);
+    display: block;
+    font-weight: 700;
+}
+
+.projects__link {
+    color: #005FFF;
+    text-decoration: underline;
+}
+
+.projects__decor-line {
+    flex-grow: 1;
+    border-bottom: 1px dashed #595959;
+}
+
+.projects__skill {
+    font-size: 14px;
+    line-height: 14px;
+    color: #595959;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    color: var(--black);
+}
+
+.portfolio {
+    color: var(--primary-color);
+}
+
+.portfolio-link {
+    color: var(--accent);;
+    font-weight: 700;
+    line-height: 24px;
+    position: relative;
+}
+
+.portfolio-link,
+.company-name,
+.university {
+    transition: color .3s ease-in-out;
+}
+
+.portfolio-link:hover,
+.company-name:hover,
+.university:hover {
+    color: var(--primary-color);
+}
+
+.portfolio__item {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 17px;
+    margin-bottom: 20px;
+}
+
+.portfolio__stack {
+    list-style: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    position: relative;
+    font-weight: 400;
+}
+
+.company-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.company-name,
+.accent-line {
+    color: var(--accent);;
+    position: relative;
+}
+
+.working-time {
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--light-gray);
+}
+
+.profession-duties {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.profession-duties-item {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.education {
+    list-style: none;
+}
+
+.education__item {
+    margin-bottom: 15px;
+}
+
+.university {
+    color: var(--accent);
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 15px 0 10px;
+}
+
+.university-description {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
