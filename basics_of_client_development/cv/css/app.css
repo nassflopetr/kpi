@@ -1,22 +1,9 @@
-/* All elements reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Colors variables */
-:root {
-    --primary-color: #161D2A;
-    --secondary: #E0EBFE;
-    --accent: #6D9BF5;
-    --black: #000;
-    --white: #fff;
-    --light-gray: #A8A8A8;
-    --gray: #595959;
-}
-
-/* <a> tags underline reset */
 a {
     text-decoration: none;
 }
@@ -27,9 +14,8 @@ a {
     padding: 40px;
 }
 
-/* Website main wrapper */
 .wrapper {
-    background-color: var(--white);
+    background-color: #fff;
     display: flex;
     margin: 0 auto;
     box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
@@ -38,7 +24,7 @@ a {
 }
 
 .side-bar {
-    background-color: var(--secondary);
+    background-color: #E0EBFE;
     width: 370px;
     padding: 40px 0;
 }
@@ -60,7 +46,7 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    color: var(--primary-color);;
+    color: #161D2A;
     transition: color 0.3s ease;
 }
 
@@ -71,14 +57,14 @@ a {
 
 .contacts-link:hover,
 .training-text:hover {
-    color: var(--accent);;
+    color: #6D9BF5;
 }
 
 .contacts-link-type {
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
-    color: var(--primary-color);;
+    color: #161D2A;
     margin-right: 10px;
     width: 15px;
     display: inline-block;
@@ -93,19 +79,19 @@ a {
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: #161D2A;
 }
 
 .aside-item {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    color: var(--accent);
+    color: #6D9BF5;
     margin-left: 15px;
 }
 
 .aside-text {
-    color: var(--primary-color);
+    color: #161D2A;
     transition: color 0.3s ease;
 }
 
@@ -114,14 +100,14 @@ a {
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 20px;
-    color: var(--black);
+    color: #000;
 }
 
 .bio-title {
     font-size: 50px;
     font-weight: 700;
     line-height: 40px;
-    color: var(--black);
+    color: #000;
 }
 
 .bio-description {
@@ -156,7 +142,7 @@ a {
     content: counter(list)'.';
     position: absolute;
     left: -1.5rem;
-    color: var(--black);
+    color: #000;
     display: block;
     font-weight: 700;
 }
@@ -183,15 +169,15 @@ a {
     line-height: 24px;
     margin-bottom: 15px;
     margin-top: 50px;
-    color: var(--black);
+    color: #000;
 }
 
 .portfolio {
-    color: var(--primary-color);
+    color: #161D2A;
 }
 
 .portfolio-link {
-    color: var(--accent);;
+    color: #6D9BF5;
     font-weight: 700;
     line-height: 24px;
     position: relative;
@@ -206,11 +192,11 @@ a {
 .portfolio-link:hover,
 .company-name:hover,
 .university:hover {
-    color: var(--primary-color);
+    color: #161D2A;
 }
 
 .portfolio__item {
-    color: var(--primary-color);
+    color: #161D2A;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -233,19 +219,19 @@ a {
     line-height: 24px;
     margin-top: 15px;
     margin-bottom: 10px;
-    color: var(--black);
+    color: #000;
 }
 
 .company-name,
 .accent-line {
-    color: var(--accent);;
+    color: #6D9BF5;
     position: relative;
 }
 
 .working-time {
     font-size: 12px;
     line-height: 24px;
-    color: var(--light-gray);
+    color: #A8A8A8;
 }
 
 .profession-duties {
@@ -255,7 +241,7 @@ a {
 }
 
 .profession-duties-item {
-    color: var(--gray);
+    color: #595959;
     font-size: 14px;
     line-height: 24px;
 }
@@ -269,7 +255,7 @@ a {
 }
 
 .university {
-    color: var(--accent);
+    color: #6D9BF5;
     position: relative;
     font-size: 16px;
     font-weight: 700;
@@ -278,7 +264,7 @@ a {
 }
 
 .university-description {
-    color: var(--primary-color);
+    color: #161D2A;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;

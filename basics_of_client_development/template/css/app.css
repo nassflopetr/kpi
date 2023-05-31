@@ -1,9 +1,3 @@
-/*  Website Fonts
-    font-family: 'Inter', sans-serif;
-    font-family: 'Mulish', sans-serif;
-    font-family: 'Playfair Display', serif;
-*/
-
 * {
     padding: 0;
     margin: 0;
@@ -11,28 +5,6 @@
     list-style: none;
 }
 
-:root {
-    /* Website Colors */
-    --accent-color: #FB8F1D;
-    --white-color: #FFFFFF;
-    --black-color: #000000;
-    --text-color: #7D7987;
-    --text-color-2: #B8BECD;
-    --text-color-3: #4A4C53;
-    --text-color-4: #80918E;
-    --text-color-5: #042521;
-    --decor-line: #C4C4C4;
-    --text-primary-color: #202336;
-    --text-color-light: #848484;
-    --background-color: #F9F9FB;
-    --border-color: #AFB0B9;
-    --animation: .3s ease-in-out;
-    --width-container: 1220px;
-    --narrow-width-container: calc( var(--width-container) - 100px );
-    --container-offset: calc( ( 100vw - var(--width-container) ) / 2 );
-}
-
-/* General styles */
 a {
     text-decoration: none;
     color: inherit;
@@ -43,32 +15,32 @@ a {
 }
 
 .container {
-    max-width: var(--width-container);
+    max-width: 1220px;
     margin: 0 auto;
 }
 
 .narrow-container {
-    max-width: var(--narrow-width-container);
+    max-width: calc( 1220px - 100px );
     margin: 0 auto;
 }
 
 .primary-btn, .secondary-btn  {
-    transition: background-color var(--animation), color var(--animation);
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
     border-radius: 8px;
     border: 1px solid transparent;
 }
 
 .primary-btn,
 .secondary-btn:hover {
-    background-color: var(--accent-color);
-    color: var(--white-color);
+    background-color: #FB8F1D;
+    color: #FFFFFF;
 }
 
 .secondary-btn,
 .primary-btn:hover {
     background-color: transparent;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
+    color: #FB8F1D;
+    border: 1px solid #FB8F1D;
 }
 
 .title {
@@ -76,11 +48,9 @@ a {
     font-weight: 700;
     font-size: 36px;
     line-height: 50px;
-    color: var(--black-color);
+    color: #000000;
 }
-/* End general styles */
 
-/* HEADER */
 .header {
     padding: 43px 0;
     font-family: 'Inter', sans-serif;
@@ -105,13 +75,13 @@ a {
 }
 
 .header-navigation__link {
-    color: var(--text-color-2);
-    transition: color var(--animation);
+    color: #B8BECD;
+    transition: color .3s ease-in-out;
 }
 
 .header-navigation__link--active,
 .header-navigation__link:hover {
-    color: var(--text-primary-color);
+    color: #202336;
 }
 
 .header-auth__list {
@@ -126,13 +96,11 @@ a {
     min-width: 132px;
 }
 
-/* MAIN */
-/* Welcome section styles */
 .welcome-section {
     padding: 60px 0 135px;
-    background-image: url("./images/svg/cross-small.svg"), url("./images/svg/circle-large.svg"), url("./images/svg/circle.svg");
+    background-image: url("../img/svg/cross-small.svg"), url("../img/svg/circle-large.svg"), url("../img/svg/circle.svg");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left 45% top 110px, left calc( var(--container-offset) - 100px ) top 45%, left 45% bottom 140px;
+    background-position: left 45% top 110px, left calc( calc( ( 100vw - 1220px ) / 2 ) - 100px ) top 45%, left 45% bottom 140px;
 }
 
 .welcome-section__container {
@@ -144,7 +112,7 @@ a {
 .welcome-section__title {
     font-size: 64px;
     line-height: 1.25;
-    color: var(--text-primary-color);
+    color: #202336;
 }
 
 .welcome-section__subtitle {
@@ -153,7 +121,7 @@ a {
     font-size: 22px;
     line-height: 1.22;
     position: relative;
-    color: var(--text-primary-color);
+    color: #202336;
     margin: 72px 0;
 }
 
@@ -162,7 +130,7 @@ a {
     width: 32px;
     height: 2px;
     position: absolute;
-    background-color: var(--text-primary-color);
+    background-color: #202336;
     border-radius: 4px;
     bottom: -10px;
     left: 0;
@@ -175,12 +143,12 @@ a {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    color: var(--text-color-3);
+    color: #4A4C53;
     margin-bottom: 50px;
 }
 
 .welcome-section-filter__item {
-    border: 1px solid var(--border-color);
+    border: 1px solid #AFB0B9;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -216,12 +184,11 @@ a {
     max-width: 100%;
 }
 
-/* Explore section styles */
 .explore-section {
     padding: 135px 0 146px;
-    background-image: url("./images/svg/cross-small.svg"), url("./images/svg/circle.svg");
+    background-image: url("../img/svg/cross-small.svg"), url("../img/svg/circle.svg");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left 55% top 120px, right calc( var(--container-offset) + 100px ) bottom 35%;
+    background-position: left 55% top 120px, right calc( calc( ( 100vw - 1220px ) / 2 ) + 100px ) bottom 35%;
 }
 
 .explore-section__container {
@@ -247,7 +214,7 @@ a {
     font-weight: 300;
     font-size: 17px;
     line-height: 30px;
-    color: var(--text-color);
+    color: #7D7987;
 }
 
 .explore-section__button {
@@ -261,12 +228,11 @@ a {
     padding: 13px;
 }
 
-/* Destinations section styles */
 .destinations-section {
     padding: 146px 0 116px;
-    background-image: url("./images/svg/cross-small.svg"), url("./images/svg/circle.svg"), url("./images/svg/circle.svg");
+    background-image: url("../img/svg/cross-small.svg"), url("../img/svg/circle.svg"), url("../img/svg/circle.svg");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left calc( var(--container-offset) - 100px ) top 60%, right calc( var(--container-offset) + 200px ) top 100px, left 45% bottom 80px;
+    background-position: left calc( calc( ( 100vw - 1220px ) / 2 ) - 100px ) top 60%, right calc( calc( ( 100vw - 1220px ) / 2 ) + 200px ) top 100px, left 45% bottom 80px;
 }
 
 .destinations-section__header,
@@ -282,7 +248,7 @@ a {
     font-family: 'Inter', sans-serif;
     font-size: 17px;
     font-weight: 600;
-    color: var(--accent-color);
+    color: #FB8F1D;
 }
 
 .destinations-section__vector,
@@ -305,7 +271,7 @@ a {
 }
 
 .destinations-section__image {
-    transition: filter var(--animation);
+    transition: filter .3s ease-in-out;
 }
 
 .destinations-section__item:hover .destinations-section__image  {
@@ -313,7 +279,7 @@ a {
 }
 
 .destinations-section__description {
-    background: var(--white-color);
+    background: #FFFFFF;
     border-radius: 0 6px 0 0;
     min-width: 120px;
     min-height: 55px;
@@ -333,22 +299,21 @@ a {
     font-weight: 600;
     font-size: 17px;
     line-height: 1.5;
-    color: var(--text-color-5);
+    color: #042521;
 }
 
 .destinations-section__country {
     font-weight: 500;
     font-size: 15px;
     line-height: 1.6;
-    color: var(--text-color-4);
+    color: #80918E;
 }
 
-/* Guides section styles */
 .guides-section {
     padding: 116px 0 124px;
-    background-image: url("./images/svg/cross-small.svg"), url("./images/svg/cross-small.svg"), url("./images/svg/circle.svg");
+    background-image: url("../img/svg/cross-small.svg"), url("../img/svg/cross-small.svg"), url("../img/svg/circle.svg");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: right calc( var(--container-offset) - 60px ) top 140px, left 40% bottom 250px, left calc( var(--container-offset) + 100px ) top 150px;
+    background-position: right calc( calc( ( 100vw - 1220px ) / 2 ) - 60px ) top 140px, left 40% bottom 250px, left calc( calc( ( 100vw - 1220px ) / 2 ) + 100px ) top 150px;
 }
 
 .guides-section__container {
@@ -376,7 +341,7 @@ a {
     font-weight: 300;
     font-size: 17px;
     line-height: 30px;
-    color: var(--text-color);
+    color: #7D7987;
 }
 
 .guides-section__button {
@@ -390,12 +355,11 @@ a {
     padding: 13px;
 }
 
-/* Testimonials section styles */
 .testimonials-section {
     padding: 130px 0;
-    background-image: url("./images/svg/circle.svg");
+    background-image: url("../img/svg/circle.svg");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left calc( var(--container-offset) - 60px ) top 51%;
+    background-position: left calc( calc( ( 100vw - 1220px ) / 2 ) - 60px ) top 51%;
 }
 
 .testimonials-section__reviews {
@@ -406,7 +370,7 @@ a {
 }
 
 .testimonials-section__reviews::before {
-    content: url("./images/svg/cross.svg");
+    content: url("../img/svg/cross.svg");
     position: absolute;
     bottom: -17px;
     right: 43%;
@@ -414,7 +378,7 @@ a {
 }
 
 .testimonials-section__reviews::after {
-    content: url("./images/svg/circle-large.svg");
+    content: url("../img/svg/circle-large.svg");
     position: absolute;
     top: -10px;
     right: 9%;
@@ -423,7 +387,7 @@ a {
 
 .testimonials-section__reviews-info {
     flex: 0 1 450px;
-    color: var(--black-color);
+    color: #000000;
 }
 
 .testimonials-section__stars {
@@ -474,7 +438,7 @@ a {
     width: 132px;
     bottom: 0;
     right: 0;
-    background-color: var(--white-color);
+    background-color: #FFFFFF;
     border-radius: 6px 0 0 0;
     display: flex;
     column-gap: 22px;
@@ -490,12 +454,11 @@ a {
     border: none;
 }
 
-/* Stories section styles */
 .stories-section {
     padding: 130px 0 270px;
-    background-image: url("./images/svg/cross-small.svg"), url("./images/svg/circle.svg"), url("./images/svg/circle.svg");
+    background-image: url("../img/svg/cross-small.svg"), url("../img/svg/circle.svg"), url("../img/svg/circle.svg");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left 40% top 50px, left calc( var(--container-offset) - 70px ) bottom 45%, left 65% bottom 170px;
+    background-position: left 40% top 50px, left calc( calc( ( 100vw - 1220px ) / 2 ) - 70px ) bottom 45%, left 65% bottom 170px;
 }
 
 .stories-section__item {
@@ -510,7 +473,7 @@ a {
     width: 100%;
     object-fit: cover;
     object-position: top;
-    transition: filter var(--animation);
+    transition: filter .3s ease-in-out;
     filter: saturate( 90% );
 }
 
@@ -529,7 +492,7 @@ a {
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
-    color: var(--black-color);
+    color: #000000;
     margin: 13px 0;
     -webkit-line-clamp: 2;
 }
@@ -537,31 +500,30 @@ a {
 .story-section__paragraph {
     font-size: 15px;
     line-height: 26px;
-    color: var(--text-color);
+    color: #7D7987;
     margin-bottom: 23px;
     -webkit-line-clamp: 3;
 }
 
 :is(.stories-section__link, .destinations-section__link) {
-    transition: color var(--animation);
+    transition: color .3s ease-in-out;
 }
 
 :is(.stories-section__vector, .destinations-section__vector) {
-    transition: transform var(--animation);
+    transition: transform .3s ease-in-out;
 }
 
 :is( .stories-section__link, .destinations-section__link):hover {
-    color: var(--text-primary-color);
+    color: #202336;
 }
 
 :is( .stories-section__link, .destinations-section__link):hover :is(.destinations-section__vector, .stories-section__vector) {
     transform: translateX( 10px );
 }
 
-/* FOOTER */
 .footer {
     padding-top: 80px;
-    background-color: var(--background-color);
+    background-color: #F9F9FB;
 }
 
 .footer__container {
@@ -571,11 +533,10 @@ a {
     grid-template-columns: 390px 1fr;
 }
 
-/* Footer Info */
 .footer-info__wrapper {
     line-height: 28px;
     font-weight: 300;
-    color: var(--text-color-light);
+    color: #848484;
     font-family: 'Mulish', sans-serif;
 }
 
@@ -589,8 +550,6 @@ a {
     font-size: 17px;
 }
 
-
-/* Footer Navigation */
 .footer-navigation__list {
     display: grid;
     column-gap: 80px;
@@ -604,24 +563,23 @@ a {
     font-weight: 700;
     font-size: 19px;
     line-height: 60px;
-    color: var(--black-color);
+    color: #000000;
 }
 
 .footer-navigation__inner-item {
     font-weight: 300;
     font-size: 18px;
     line-height: 38px;
-    color: var(--text-color-light);
-    transition: color var(--animation);
+    color: #848484;
+    transition: color .3s ease-in-out;
 }
 
 .footer-navigation__inner-item:hover {
-    color: var(--text-primary-color);
+    color: #202336;
 }
 
-/* Footer Social Media  */
 .footer-social-media {
-    border-top: 1px solid var(--decor-line);
+    border-top: 1px solid #C4C4C4;
     display: flex;
     padding: 32px 0;
     gap: 35px;
@@ -631,11 +589,11 @@ a {
 }
 
 .footer-social-media__image path {
-    transition: fill var(--animation);
+    transition: fill .3s ease-in-out;
 }
 
 .footer-social-media__image:hover path {
-    fill: var(--accent-color);
+    fill: #FB8F1D;
 }
 
 .footer-social-media__link {
