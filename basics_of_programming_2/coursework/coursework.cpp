@@ -299,6 +299,13 @@ public:
 
         lessons.clear();
     }
+
+    ~Faculty()
+    {
+        students.clear();
+        lectures.clear();
+        practices.clear();
+    }
 };
 
 int main() {
